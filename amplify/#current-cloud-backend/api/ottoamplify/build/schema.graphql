@@ -1,0 +1,216 @@
+type Expense {
+  id: ID!
+  amount: Float!
+  type: String!
+  category: String!
+  sub_category: String!
+  description: String
+  creation_date: String!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelExpenseConnection {
+  items: [Expense]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelExpenseFilterInput {
+  id: ModelIDFilterInput
+  amount: ModelFloatFilterInput
+  type: ModelStringFilterInput
+  category: ModelStringFilterInput
+  sub_category: ModelStringFilterInput
+  description: ModelStringFilterInput
+  creation_date: ModelStringFilterInput
+  and: [ModelExpenseFilterInput]
+  or: [ModelExpenseFilterInput]
+  not: ModelExpenseFilterInput
+}
+
+type Query {
+  getExpense(id: ID!): Expense
+  listExpenses(filter: ModelExpenseFilterInput, limit: Int, nextToken: String): ModelExpenseConnection
+  searchExpenses(filter: SearchableExpenseFilterInput, sort: SearchableExpenseSortInput, limit: Int, nextToken: Int): SearchableExpenseConnection
+}
+
+input CreateExpenseInput {
+  id: ID
+  amount: Float!
+  type: String!
+  category: String!
+  sub_category: String!
+  description: String
+  creation_date: String!
+}
+
+input UpdateExpenseInput {
+  id: ID!
+  amount: Float
+  type: String
+  category: String
+  sub_category: String
+  description: String
+  creation_date: String
+}
+
+input DeleteExpenseInput {
+  id: ID
+}
+
+type Mutation {
+  createExpense(input: CreateExpenseInput!): Expense
+  updateExpense(input: UpdateExpenseInput!): Expense
+  deleteExpense(input: DeleteExpenseInput!): Expense
+}
+
+type Subscription {
+  onCreateExpense: Expense @aws_subscribe(mutations: ["createExpense"])
+  onUpdateExpense: Expense @aws_subscribe(mutations: ["updateExpense"])
+  onDeleteExpense: Expense @aws_subscribe(mutations: ["deleteExpense"])
+}
+
+input SearchableStringFilterInput {
+  ne: String
+  eq: String
+  match: String
+  matchPhrase: String
+  matchPhrasePrefix: String
+  multiMatch: String
+  exists: Boolean
+  wildcard: String
+  regexp: String
+}
+
+input SearchableIDFilterInput {
+  ne: ID
+  eq: ID
+  match: ID
+  matchPhrase: ID
+  matchPhrasePrefix: ID
+  multiMatch: ID
+  exists: Boolean
+  wildcard: ID
+  regexp: ID
+}
+
+input SearchableIntFilterInput {
+  ne: Int
+  gt: Int
+  lt: Int
+  gte: Int
+  lte: Int
+  eq: Int
+  range: [Int]
+}
+
+input SearchableFloatFilterInput {
+  ne: Float
+  gt: Float
+  lt: Float
+  gte: Float
+  lte: Float
+  eq: Float
+  range: [Float]
+}
+
+input SearchableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input SearchableExpenseFilterInput {
+  id: SearchableIDFilterInput
+  amount: SearchableFloatFilterInput
+  type: SearchableStringFilterInput
+  category: SearchableStringFilterInput
+  sub_category: SearchableStringFilterInput
+  description: SearchableStringFilterInput
+  creation_date: SearchableStringFilterInput
+  and: [SearchableExpenseFilterInput]
+  or: [SearchableExpenseFilterInput]
+  not: SearchableExpenseFilterInput
+}
+
+enum SearchableSortDirection {
+  asc
+  desc
+}
+
+enum SearchableExpenseSortableFields {
+  id
+  amount
+  type
+  category
+  sub_category
+  description
+  creation_date
+}
+
+input SearchableExpenseSortInput {
+  field: SearchableExpenseSortableFields
+  direction: SearchableSortDirection
+}
+
+type SearchableExpenseConnection {
+  items: [Expense]
+  nextToken: String
+}

@@ -1,0 +1,9 @@
+type Expense @model @auth(rules: [{allow: owner}]) @searchable{
+  id: ID!
+	amount: Float!
+	type: String!
+	category: String!
+	sub_category: String!
+	description: String
+	creation_date: String!
+}

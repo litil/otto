@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "ottoamplify-20181212112726-authRole",
+            "UnauthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20181212112726-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20181212112726-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "ottoamplify-20181212112726-deployment",
+            "UnauthRoleName": "ottoamplify-20181212112726-unauthRole",
+            "StackName": "ottoamplify-20181212112726",
+            "StackId": "arn:aws:cloudformation:eu-west-1:077309247329:stack/ottoamplify-20181212112726/855f4450-fdf8-11e8-99ff-503abe701c99"
+        }
+    }
+}

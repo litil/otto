@@ -74,7 +74,7 @@ class App extends Component {
     const createExpenseInput = {
       id: this.guid(),
       amount: this.state.amount,
-      type: this.state.type,
+      expense_type: this.state.type,
       category: this.state.category,
       sub_category: this.state.sub_category,
       description: this.state.description,

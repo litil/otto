@@ -1,7 +1,7 @@
 type Expense {
   id: ID!
   amount: Float!
-  type: String!
+  expense_type: String!
   category: String!
   sub_category: String!
   description: String
@@ -76,7 +76,7 @@ input ModelBooleanFilterInput {
 input ModelExpenseFilterInput {
   id: ModelIDFilterInput
   amount: ModelFloatFilterInput
-  type: ModelStringFilterInput
+  expense_type: ModelStringFilterInput
   category: ModelStringFilterInput
   sub_category: ModelStringFilterInput
   description: ModelStringFilterInput
@@ -95,7 +95,7 @@ type Query {
 input CreateExpenseInput {
   id: ID
   amount: Float!
-  type: String!
+  expense_type: String!
   category: String!
   sub_category: String!
   description: String
@@ -105,7 +105,7 @@ input CreateExpenseInput {
 input UpdateExpenseInput {
   id: ID!
   amount: Float
-  type: String
+  expense_type: String
   category: String
   sub_category: String
   description: String
@@ -180,7 +180,7 @@ input SearchableBooleanFilterInput {
 input SearchableExpenseFilterInput {
   id: SearchableIDFilterInput
   amount: SearchableFloatFilterInput
-  type: SearchableStringFilterInput
+  expense_type: SearchableStringFilterInput
   category: SearchableStringFilterInput
   sub_category: SearchableStringFilterInput
   description: SearchableStringFilterInput
@@ -198,7 +198,7 @@ enum SearchableSortDirection {
 enum SearchableExpenseSortableFields {
   id
   amount
-  type
+  expense_type
   category
   sub_category
   description

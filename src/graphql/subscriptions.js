@@ -5,7 +5,7 @@ export const onCreateExpense = `subscription OnCreateExpense {
   onCreateExpense {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description
@@ -17,7 +17,7 @@ export const onUpdateExpense = `subscription OnUpdateExpense {
   onUpdateExpense {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description
@@ -29,7 +29,7 @@ export const onDeleteExpense = `subscription OnDeleteExpense {
   onDeleteExpense {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description

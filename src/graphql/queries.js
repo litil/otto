@@ -5,7 +5,7 @@ export const getExpense = `query GetExpense($id: ID!) {
   getExpense(id: $id) {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description
@@ -22,7 +22,7 @@ export const listExpenses = `query ListExpenses(
     items {
       id
       amount
-      type
+      expense_type
       category
       sub_category
       description
@@ -47,7 +47,7 @@ export const searchExpenses = `query SearchExpenses(
     items {
       id
       amount
-      type
+      expense_type
       category
       sub_category
       description

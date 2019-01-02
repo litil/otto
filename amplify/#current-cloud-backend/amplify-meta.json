@@ -1,35 +1,35 @@
 {
 	"providers": {
 		"awscloudformation": {
-			"AuthRoleName": "ottoamplify-20181212112726-authRole",
-			"UnauthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20181212112726-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20181212112726-authRole",
+			"AuthRoleName": "ottoamplify-20190102180232-authRole",
+			"UnauthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20190102180232-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::077309247329:role/ottoamplify-20190102180232-authRole",
 			"Region": "eu-west-1",
-			"DeploymentBucketName": "ottoamplify-20181212112726-deployment",
-			"UnauthRoleName": "ottoamplify-20181212112726-unauthRole",
-			"StackName": "ottoamplify-20181212112726",
-			"StackId": "arn:aws:cloudformation:eu-west-1:077309247329:stack/ottoamplify-20181212112726/855f4450-fdf8-11e8-99ff-503abe701c99"
+			"DeploymentBucketName": "ottoamplify-20190102180232-deployment",
+			"UnauthRoleName": "ottoamplify-20190102180232-unauthRole",
+			"StackName": "ottoamplify-20190102180232",
+			"StackId": "arn:aws:cloudformation:eu-west-1:077309247329:stack/ottoamplify-20190102180232/32255090-0eb0-11e9-8123-0a9391483dc6"
 		}
 	},
 	"auth": {
-		"cognito87e1958a": {
+		"cognito40311770": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/ottoamplify-20181212112726-deployment/amplify-cfn-templates/auth/cognito87e1958a-cloudformation-template.yml",
-				"logicalId": "authcognito87e1958a"
+				"s3TemplateURL": "https://s3.amazonaws.com/ottoamplify-20190102180232-deployment/amplify-cfn-templates/auth/cognito40311770-cloudformation-template.yml",
+				"logicalId": "authcognito40311770"
 			},
-			"lastPushTimeStamp": "2018-12-13T16:27:44.418Z",
+			"lastPushTimeStamp": "2019-01-02T17:25:57.049Z",
 			"output": {
-				"AppClientSecret": "e7ri1rl7qbbqera3nft7r4jc0s96oi2qjtdfvceeg4h6lc18id5",
-				"UserPoolId": "eu-west-1_nP9PPfK5a",
-				"AppClientIDWeb": "66artibsuplfk5pqqhlshkdddp",
-				"AppClientID": "1r2lt33j6kiinr7s38ee8sjnmf",
-				"IdentityPoolId": "eu-west-1:7bc6e0d7-6657-4af3-bb10-854de144923c",
-				"IdentityPoolName": "cognito87e1958a_identitypool_87e1958a",
-				"UserPoolName": "cognito87e1958a_userpool_87e1958a"
+				"AppClientSecret": "1pf6jbcp5lm3ttrouasmag9jiulhhb2mdt8k3tu2rtmrh0h7unlv",
+				"UserPoolId": "eu-west-1_9Gvbv66U7",
+				"AppClientIDWeb": "3lftv7pet6ibtb56tajj9tr7n1",
+				"AppClientID": "7v4r8s5kljdrl08a44e618icnn",
+				"IdentityPoolId": "eu-west-1:2e4eb833-d249-4998-b8a9-f32751df9557",
+				"IdentityPoolName": "cognito40311770_identitypool_40311770",
+				"UserPoolName": "cognito40311770_userpool_40311770"
 			},
-			"lastPushDirHash": "DfThoKOqPADa7N2nIqLZMCbBbfw="
+			"lastPushDirHash": "IHAeRK+XlmCCEVq/vxNofu9+/nk="
 		}
 	},
 	"api": {
@@ -38,19 +38,19 @@
 			"providerPlugin": "awscloudformation",
 			"output": {
 				"securityType": "AMAZON_COGNITO_USER_POOLS",
-				"GraphQLAPIIdOutput": "64a2jcvnjneg5od6dym74hffye",
-				"GraphQLAPIEndpointOutput": "https://ytzfizx3sfethdrixhk4ddbgnu.appsync-api.eu-west-1.amazonaws.com/graphql",
-				"GraphQLAPIKeyOutput": "da2-iiypwkpym5cgler2t3iqysztvy",
-				"AuthCognitoUserPoolIdOutput": "eu-west-1_nP9PPfK5a",
-				"AuthCognitoUserPoolNativeClientId": "See UserPool: eu-west-1_nP9PPfK5a",
-				"AuthCognitoUserPoolJSClientId": "See UserPool: eu-west-1_nP9PPfK5a"
+				"GraphQLAPIIdOutput": "2p4mm3uyhbdhtlqrktss6r2nay",
+				"GraphQLAPIEndpointOutput": "https://v2nmvaeawjc6fenbom376gvbve.appsync-api.eu-west-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-eichwibi45csfmltkbz373egji",
+				"AuthCognitoUserPoolIdOutput": "eu-west-1_9Gvbv66U7",
+				"AuthCognitoUserPoolNativeClientId": "See UserPool: eu-west-1_9Gvbv66U7",
+				"AuthCognitoUserPoolJSClientId": "See UserPool: eu-west-1_9Gvbv66U7"
 			},
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/ottoamplify-20181212112726-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"s3TemplateURL": "https://s3.amazonaws.com/ottoamplify-20190102180232-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apiottoamplify"
 			},
-			"lastPushTimeStamp": "2018-12-13T16:27:45.045Z",
-			"lastPushDirHash": "CN9xl0EYwwA3tkoplYT+tZzX4UI="
+			"lastPushTimeStamp": "2019-01-02T17:25:57.782Z",
+			"lastPushDirHash": "h7AcD9+vYAUI01oUrzEs2qRjRtE="
 		}
 	}
 }

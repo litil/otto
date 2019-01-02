@@ -2,14 +2,14 @@
     "AppSyncApiName": "ottoamplify",
     "AuthCognitoUserPoolId": {
         "Fn::GetAtt": [
-            "authcognito87e1958a",
+            "authcognito40311770",
             "Outputs.UserPoolId"
         ]
     },
     "ElasticSearchStreamingLambdaCodeS3Key": "amplify-appsync-files/python_streaming_function.zip",
-    "ElasticSearchStreamingLambdaCodeS3Bucket": "ottoamplify-20181212112726-deployment",
-    "schemaGraphql": "s3://ottoamplify-20181212112726-deployment/amplify-appsync-files/schema.graphql.1544717700980",
-    "ResolverBucket": "ottoamplify-20181212112726-deployment",
+    "ElasticSearchStreamingLambdaCodeS3Bucket": "ottoamplify-20190102180232-deployment",
+    "schemaGraphql": "s3://ottoamplify-20190102180232-deployment/amplify-appsync-files/schema.graphql.1546449107610",
+    "ResolverBucket": "ottoamplify-20190102180232-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1544717700980"
+    "DeploymentTimestamp": "1546449107610"
 }

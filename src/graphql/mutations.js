@@ -5,7 +5,7 @@ export const createExpense = `mutation CreateExpense($input: CreateExpenseInput!
   createExpense(input: $input) {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description
@@ -17,7 +17,7 @@ export const updateExpense = `mutation UpdateExpense($input: UpdateExpenseInput!
   updateExpense(input: $input) {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description
@@ -29,7 +29,7 @@ export const deleteExpense = `mutation DeleteExpense($input: DeleteExpenseInput!
   deleteExpense(input: $input) {
     id
     amount
-    type
+    expense_type
     category
     sub_category
     description

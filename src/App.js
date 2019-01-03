@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { expenseType, expenseCategory, expenseSubCategory } from './enums.js'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Amplify, {API,graphqlOperation} from 'aws-amplify';
 import { withAuthenticator} from 'aws-amplify-react'; 
@@ -31,9 +33,9 @@ class App extends Component {
       searchResults:[],
       search: "",
       amount: 100,
-      type: "PAYMENT",  /* either reimbursment, advance, payment */
-      category: "FOOD",
-      sub_category: "GROCERIES",
+      type: expenseType.MINE,  /* either reimbursment, advance, payment */
+      category: expenseCategory.FOOD_DINING,
+      sub_category: expenseSubCategory.FOOD_DINING.GROCERIES,
       description: "Description",
       displayAdd: true,
       displayUpdate:false,
@@ -123,7 +125,7 @@ async handleUpdate(event) {
   const updateExpenseInput = {
     id: this.state.id,
     amount: this.state.amount,
-    type: this.state.type,
+    expense_type: this.state.type,
     category: this.state.category,
     sub_category: this.state.sub_category,
     description: this.state.description

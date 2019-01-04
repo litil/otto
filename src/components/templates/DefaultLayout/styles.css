@@ -1,0 +1,36 @@
+.DefaultLayout-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #232323;
+}
+
+.LeftMenu-container {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #232323;
+}
+
+.RightMenu-container {
+  display: flex;
+  flex-direction: column;
+  width: 4%;
+  height: 100%;
+}
+
+.MainComponent-container {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  /* height: 100%; */
+  min-height: 100vh;
+  margin-left: 16%;
+  background-color: #151515;
+}

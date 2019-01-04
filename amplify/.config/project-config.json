@@ -1,9 +1,9 @@
 {
-    "projectName": "ottoamplify",
-    "projectPath": "/home/guillaume/work/poc/otto-amplify",
+    "projectName": "otto-amplify",
+    "projectPath": "/Users/litil/Documents/projects/otto",
     "defaultEditor": "code",
     "frontendHandler": {
-        "javascript": "/home/guillaume/.nvm/versions/node/v10.9.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+        "javascript": "/Users/litil/.nvm/versions/node/v9.5.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
     },
     "javascript": {
         "framework": "react",
@@ -15,6 +15,6 @@
         }
     },
     "providers": {
-        "awscloudformation": "/home/guillaume/.nvm/versions/node/v10.9.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+        "awscloudformation": "/Users/litil/.nvm/versions/node/v9.5.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
     }
 }

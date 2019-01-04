@@ -1,0 +1,69 @@
+.ExpenseRow-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  min-height: 80px;
+  margin: 0px 0px;
+}
+
+.ExpenseRow-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ExpenseRow-category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.ExpenseRow-categoryIcon {
+  margin-right: 16px;
+}
+
+.ExpenseRow-categoryIcon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.ExpenseRow-categoryLabelContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ExpenseRow-subCategoryLabel {
+  font-size: 1.1em;
+}
+
+.ExpenseRow-categoryLabel {
+  font-size: 0.9em;
+  font-weight: italic;
+}
+
+
+.ExpenseRow-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ExpenseRow-amount {
+  margin-right: 16px;
+}
+
+
+.ExpenseRow-delete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
